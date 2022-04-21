@@ -25,8 +25,9 @@ export class ListarTareasComponent implements OnInit {
   }
 
   eliminar(idTarea: number) {
-    this.restService.eliminarTarea(idTarea).subscribe((data) => { });
-    this.listarTareas();
+    this.restService.eliminarTarea(idTarea).subscribe((data) => { 
+      this.tareas=this.tareas.filter(tarea => tarea.id != idTarea);
+    });
   }
 
   modificarCompleto(tarea: Tarea) {
