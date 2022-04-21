@@ -8,7 +8,7 @@ Proyecto para hacer un todo-list
 -
 
 ## Requisitos para el frontend
-- Node.js 10.4 o superior 
+- Node.js 16 o superior 
 - npm
 
 

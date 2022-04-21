@@ -1,12 +1,8 @@
 package com.yuliet.todo.controllers;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import com.yuliet.todo.dtos.TareaDto;
-import com.yuliet.todo.entities.Tarea;
-import com.yuliet.todo.repositories.TareaRepository;
 import com.yuliet.todo.services.ITareaService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,9 +31,9 @@ public class TareaController {
      */
 
     @GetMapping()
-    public ResponseEntity<List<Tarea>> getAll() {
+    public ResponseEntity<List<TareaDto>> getAll() {
         try {
-            List<Tarea> items = new ArrayList<Tarea>();
+            List<TareaDto> items = tareaService.listarTareas();
             if (items.isEmpty())
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 

@@ -59,6 +59,7 @@ public class TareaService implements ITareaService {
         // Conveirte los datos
         final Tarea tarea = new Tarea();
         tarea.setName(tareaDto.getName());
+        tarea.setCompleto(tareaDto.getCompleto());
         // guarda los datos
         this.TareaRepository.save(tarea);
 
@@ -76,6 +77,7 @@ public class TareaService implements ITareaService {
             final Tarea tareaExistente = tareaOptional.get();
 
             tareaExistente.setName(tareaDto.getName());
+            tareaExistente.setCompleto(tareaDto.getCompleto());
             TareaRepository.save(tareaExistente);
 
             final TareaDto tareaDtoModificado = new TareaDto();

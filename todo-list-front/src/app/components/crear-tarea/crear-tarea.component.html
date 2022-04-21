@@ -1,0 +1,26 @@
+<div class="container">
+
+    <div class="row">
+      <div class="col">
+        <h1>Crear de tarea</h1>
+      </div>
+    </div>
+  
+  
+    <p-card class="item">
+      <span class="p-float-label">
+        <input id="float-input" type="text" pInputText [(ngModel)]="tarea.name">
+        <label for="float-input">Nombre</label>
+      </span>
+    </p-card>
+  
+  
+    <div class="row">
+      <div class="col agregar">
+        <a pButton [routerLink]="['/listar-tareas']" label="Volver" class="p-button-secondary "></a>
+        <button pButton (click)="guardar()" label="Guardar" type="button" icon="pi pi-check" iconPos="left"
+          class="p-button-info"></button>
+      </div>
+    </div>
+  </div>
+  

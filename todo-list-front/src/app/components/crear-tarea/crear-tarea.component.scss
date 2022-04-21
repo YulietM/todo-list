@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+  }
+  
+  .p-card .p-card-content.item {
+    padding: 0 !important;
+  }
+  input {
+    width: 100% !important;
+  }
+  .agregar {
+    text-align: center;
+    [pButton] {
+      margin: 1rem 1rem;
+    }
+  }

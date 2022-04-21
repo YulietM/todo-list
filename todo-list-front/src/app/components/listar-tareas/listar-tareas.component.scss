@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    li {
+      margin-bottom: 1rem;
+      button {
+        float: right;
+        margin: 0 0 0 1rem;
+      }
+    }
+  }
+  
+  .p-card .p-card-content.item {
+    padding: 0 !important;
+  }
+  
+  .agregar {
+    text-align: center;
+  }

@@ -1,0 +1,30 @@
+<div class="container">
+
+    <div class="row">
+      <div class="col">
+        <h1>Lista de tareas</h1>
+      </div>
+    </div>
+    <ul>
+      <li *ngFor="let tarea of tareas">
+        <p-card class="item">
+          <p-checkbox name="groupname-{{tarea.id}}" (onChange)="modificarCompleto(tarea)" [binary]="true"
+            [(ngModel)]="tarea.completo">
+          </p-checkbox>
+          {{tarea.name}}
+          <button pButton (click)="eliminar(tarea.id)" type="button" icon="pi pi-times" iconPos="left"
+            class="p-button-danger"></button>
+          <button pButton [routerLink]="['/editar-tarea', tarea.id]" type="button" icon="pi pi-pencil" iconPos="left"
+            class="p-button-info"></button>
+        </p-card>
+      </li>
+    </ul>
+  
+  
+    <div class="row">
+      <div class="col agregar">
+        <a pButton [routerLink]="['/crear-tareas']" label="Agregar Tarea" class="p-button-primary "></a>
+      </div>
+    </div>
+  
+  </div>
